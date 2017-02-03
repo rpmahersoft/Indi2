@@ -289,7 +289,7 @@ static void lcd_implementation_init() {
 
     const uint8_t txt1X = (u8g.getWidth() - (sizeof(STRING_SPLASH_LINE1) - 1) * (DOG_CHAR_WIDTH)) / 2;
 
-    if (show_bootscreen) 
+    if (show_bootscreen)
     {
       u8g.firstPage();
       do {
@@ -576,8 +576,7 @@ static void lcd_implementation_status_screen() {
       lcd_print(ystring);
 
       u8g.setPrintPos(2 * XYZ_SPACING + X_LABEL_POS, XYZ_BASELINE);
-      //_draw_axis_label(Z_AXIS, PSTR(MSG_Z), blink);
-      _draw_axis_label(Z_AXIS, PSTR(MSG_Z), 0);
+      _draw_axis_label(Z_AXIS, PSTR(MSG_Z),0);
       u8g.setPrintPos(2 * XYZ_SPACING + X_VALUE_POS, XYZ_BASELINE);
       lcd_print(zstring);
 

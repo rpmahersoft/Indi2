@@ -135,7 +135,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "indie-DT"
+#define CUSTOM_MACHINE_NAME "INDIE"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -206,7 +206,7 @@
 
 /**
  * --NORMAL IS 4.7kohm PULLUP!-- 1kohm pullup can be used on hotend sensor, using correct resistor and table
- * 
+ *
  * Temperature sensors available:
  *
  *    -3 : thermocouple with MAX31855 (only for sensor 0)
@@ -231,13 +231,13 @@
  *    60 : 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
  *    66 : 4.7M High Temperature thermistor from Dyze Design
  *    70 : the 100K thermistor found in the bq Hephestos 2
- * 
+ *
  *       1k ohm pullup tables - This is atypical, and requires changing out the 4.7k pullup for 1k.
  *                              (but gives greater accuracy and more stable PID)
  *    51 : 100k thermistor - EPCOS (1k pullup)
  *    52 : 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
  *    55 : 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (1k pullup)
- * 
+ *
  *  1047 : Pt1000 with 4k7 pullup
  *  1010 : Pt1000 with 1k pullup (non standard)
  *   147 : Pt100 with 4k7 pullup
@@ -443,13 +443,13 @@
 
 #if DISABLED(ENDSTOPPULLUPS)
   // fine endstop settings: Individual pullups. will be ignored if ENDSTOPPULLUPS is defined
-  //#define ENDSTOPPULLUP_XMAX
-  //#define ENDSTOPPULLUP_YMAX
-  //#define ENDSTOPPULLUP_ZMAX
-  //#define ENDSTOPPULLUP_XMIN
-  //#define ENDSTOPPULLUP_YMIN
-  //#define ENDSTOPPULLUP_ZMIN
-  //#define ENDSTOPPULLUP_ZMIN_PROBE
+//#define ENDSTOPPULLUP_XMAX
+//#define ENDSTOPPULLUP_YMAX
+//#define ENDSTOPPULLUP_ZMAX
+//#define ENDSTOPPULLUP_XMIN
+//#define ENDSTOPPULLUP_YMIN
+//#define ENDSTOPPULLUP_ZMIN
+ //#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
@@ -491,18 +491,18 @@
 */
 
 
-//Settings for Motors Axis 
+//Settings for Motors Axis
 //Author: Nelson Lobo
 //Scintillate Labs
 
-//Calculations for Extruder 
-#define EXTRUDER_GEAR_RATIO     2.9 //3.182 //3.1
+//Calculations for Extruder
+#define EXTRUDER_GEAR_RATIO    2.9 //3.1
 #define STEPS_PER_REVOLUTION_E  3200  //6400
 #define HOB_EFFECT_DIAMETER     11.59 //10.56
 #define AXIS_STEPS_PER_UNIT_E   (STEPS_PER_REVOLUTION_E * EXTRUDER_GEAR_RATIO / (HOB_EFFECT_DIAMETER * PI))
 //Calculations for Extruder ends here
 
-//Calculations for Z_axiz 
+//Calculations for Z_axiz
 /*3mm Pitch Rod Details Double Gear Arrangement*/
 //Pitch of Z Rod: 3mm
 //Z Gear Ratio: 3.182
@@ -556,8 +556,8 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
+#define DEFAULT_ACCELERATION        1500  // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION 2500   // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -872,10 +872,10 @@
     // The height can be set with M420 Z<height>
     #define ENABLE_LEVELING_FADE_HEIGHT
 
-    // 
+    //
     // Experimental Subdivision of the grid by Catmull-Rom method.
     // Synthesizes intermediate points to produce a more detailed mesh.
-    // 
+    //
     //#define ABL_BILINEAR_SUBDIVISION
     #if ENABLED(ABL_BILINEAR_SUBDIVISION)
       // Number of subdivisions between probe points
@@ -931,7 +931,7 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (10*60)
+#define HOMING_FEEDRATE_XY (20*60)
 #define HOMING_FEEDRATE_Z  (4*60)
 
 //=============================================================================
